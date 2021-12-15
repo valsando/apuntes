@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taller</title>
+    <script>
+    function interes() {
+        let ent = document.getElementById("cap").value
+        let cap = ent
+        let interes =  cap*1.02
+        alert("iniciando la inversión con" +(cap) + "el capital final es "+(interes))
+        }
+    function sueldo_total() {
+        let ent1 = document.getElementById("sueldo").value
+        let ent2 = document.getElementById("vent").value
+        let a = parseInt(ent1)
+        let b = parseFloat(ent2)
+        let c = a + b*0.1
+        alert("el sueldo total es "+ c)
+    }
+    function descuento() {
+        let a = document.getElementById("compra").value
+        let b = parseFloat(a)
+        b *= 0.85
+        let c = parseFloat(a)-b
+        alert("con un descuento de "+c+" el precio a pagar es de "+b)
+    }
+    function calificación(){
+        let a = parseFloat(document.getElementById("c1").value)
+        let b = parseFloat(document.getElementById("c2").value)
+        let c = parseFloat(document.getElementById("c3").value)
+        let d = parseFloat(document.getElementById("cef").value)
+        let e= parseFloat(document.getElementById("ctf").value)
+        let f = 0.55*((a+b+c)/3)+0.3*d+0.15*e;
+        alert("tu calificación final es:" + String(f))
+    }
+    function porcentajes() {
+        let a = parseInt(document.getElementById("muj").value)
+        let b = parseInt(document.getElementById("hom").value)
+        let c = a + b
+        alert("el porcentaje de mujeres es del "+ String((a*100)/c) 
+        + "% y el de hombres es del " + String((b*100)/c)+ "%")
+    }
+    function ordena() {
+         let a = parseInt(document.getElementById("n1").value)
+         let b = parseInt(document.getElementById("n2").value)
+         var l = [a, b]
+        alert("el orden descendente es: " + l.sort((b,a) => a-b))
+    }          
+        </script>
+</head>
+<body style="background-color:rgb(102, 190, 42);">
+    <h1>Problemas Secuenciales</h1>
+    <div style="background-color: cornflowerblue;">
+    <form>
+        <fieldset>
+            ingrese la cantidad:<input type="text" id ="cap">
+        <button type="button" onclick=interes()>ejercicio 1</button>
+        </fieldset>
+        <fieldset>
+            sueldo base:<input type="text" id="sueldo">
+            dinero total de ventas:<input type="text" id="vent">
+        <button type="button" onclick= sueldo_total() >ejercicio 2</button>
+        </fieldset>
+        <fieldset>
+            valor total de la compra:<input type="text" id ="compra">
+        <button type="button" onclick=descuento()>ejercicio 3</button>
+        </fieldset>
+        <fieldset>
+            primera calificación:<input type="text" id="c1">
+            segunda calificación:<input type="text" id="c2">
+            tercera calificación:<input type="text" id="c3">
+            calificación del examen final:<input type="text" id="cef">
+            calificación del trabajo final:<input type="text" id="ctf">
+        <button type="button" onclick= calificación() >ejercicio 4</button>
+        </fieldset>
+        <fieldset>
+            numero de mujeres:<input type="text" id="muj">
+            numero de hombres:<input type="text" id="hom">
+        <button type="button" onclick= porcentajes() >ejercicio 5</button>
+        </fieldset>
+        <fieldset>
+            primer numero:<input type="text" id="n1">
+            segundo numero :<input type="text" id="n2">
+        <button type="button" onclick= ordena() >ejercicio 6</button>
+        </fieldset>
+    </form>
+    </div>
+    <h2>para acceder a la segunda parte:</h2>
+    <p>Enlace a <a href="otra-pagina.html">los problemas propuestos</a>.</p>
+</body>
+</html>

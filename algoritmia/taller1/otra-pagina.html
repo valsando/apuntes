@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dolares() {
+            let pesos = document.getElementById("ej1").value
+            let conversion = document.getElementById("con1").value
+            let dolares = pesos/conversion 
+            alert(pesos + " pesos equivalen a " + dolares + " dolares")
+        }
+        function valor_absoluto() {
+            let num = document.getElementById("ej2").value
+            if(num<0) {
+                num *= -1
+            }
+            alert("el valor absoluto de ese numero es: " + num)
+        }
+        function masa() {
+            let p = parseInt(document.getElementById("presion3").value)
+            let v = parseInt(document.getElementById("vol3").value)
+            let t = parseInt(document.getElementById("temp3").value)
+            let m = (p * v)/ (0.37 * (t + 460))
+            alert( "con las anteriores condiciones, la cantidad en masa es de: " + m + "kilogramos")
+        }
+        function pulsaciones() {
+            let edad = parseInt(document.getElementById("ej4").value)
+            let p = (220 - edad)/ 10
+            alert("para tu edad deberias tener " + p + " latidos por minuto")
+        }
+        function sueldo() {
+            let s = parseInt(document.getElementById("ej5").value)
+            s *= 1.25
+            alert("con un incremento del 25% tu salario  nuevo es: " + s)
+        }
+        function presupuestos() {
+            let m = parseInt(document.getElementById("ej6").value)
+            let a = m * 0.4
+            let b = m * 0.3
+            alert("el minto presupuestal se divide de la siguiente manera:" +
+            "\nginecología: " + a +
+            "\nTraumatologia: " + b +
+            "\nPediatría: " + b)
+        }
+        function precio() {
+            let C = document.getElementById("ej7").value
+            C *= 1.3
+            alert("para ganarle un 30% del precio inicial, debe vender el producto a: " + C)
+        }
+        function prom_ruta() {
+            let l = parseFloat(document.getElementById("l8").value)
+            let mi = parseFloat(document.getElementById("mi8").value)
+            let v = parseFloat(document.getElementById("v8").value)
+            let a = (l + mi + v)/ 3
+            alert("el promedio esta semana fue de " + a + " minutos")
+        };
+        function porcentajes() {
+            let a = parseFloat(document.getElementById("a9").value)
+            let b = parseFloat(document.getElementById("b9").value)
+            let c = parseFloat(document.getElementById("c9").value)
+            let t = a + b + c
+            a = (a / t ) * 100
+            b = (b / t ) * 100
+            c = (c / t ) * 100
+            alert("los porcentajes de iversion correspondientes son:" +
+            "\ninversor A :" + a +
+            "\ninversor B :" + b +
+            "\ninversor C :" + c)
+        };
+        function califica() {
+            var m1 = parseFloat(document.getElementById("1m10").value);
+            var m2 = parseFloat(document.getElementById("2m10").value);
+            var m3 = parseFloat(document.getElementById("3m10").value);
+            var me = parseFloat(document.getElementById("em10").value);
+            var f1 = parseFloat(document.getElementById("1f10").value);
+            var f2 = parseFloat(document.getElementById("2f10").value);
+            var fe = parseFloat(document.getElementById("ef10").value);
+            var q1 = parseFloat(document.getElementById("1q10").value);
+            var qe = parseFloat(document.getElementById("eq10").value);
+            var mat = 0.1 *((m1 + m2 + m3)/3) + (me * 0.9);
+            var fis = 0.2 *((f1+f2)/2) + (fe * 0.8);
+            var qui = (0.15*q1) + (0.85 * qe);
+            var prom = (mat+ fis+ qui)/3;
+            alert(" el promedio de las 3 materias es: " +prom)
+        };
+    </script>
+</head>
+    <body style="background-color:rgb(202, 219, 43);">
+        <h1>Problemas Secuenciales</h1>
+        <div style="background-color: cornflowerblue;">
+        <form>
+            <fieldset>
+                ingrese la cantidad de pesos :<input type="text" id ="ej1">
+                cuantos pesos vale 1 dolar? :<input type="text" id ="con1">
+            <button type="button" onclick=dolares()>ejercicio 1</button>
+            </fieldset>
+            <fieldset>
+                ingrese un numero real:<input type="text" id="ej2">
+                
+            <button type="button" onclick= valor_absoluto() >ejercicio 2</button>
+            </fieldset>
+            <fieldset>
+                presion:<input type="text" id="presion3">
+                volumen:<input type="text" id="vol3">
+                tempertatura:<input type="text" id="temp3">
+            <button type="button" onclick=masa()>ejercicio 3</button>
+            </fieldset>
+            <fieldset>
+                edad:<input type="text" id="ej4">
+            <button type="button" onclick= pulsaciones() >ejercicio 4</button>
+            </fieldset>
+            <fieldset>
+                salario inicial:<input type="text" id="ej5">
+            <button type="button" onclick= sueldo() >ejercicio 5</button>
+            </fieldset>
+            <fieldset>
+                monto presupuestal:<input type="text" id="ej6">
+            <button type="button" onclick= presupuestos() >ejercicio 6</button>
+            </fieldset>
+            <fieldset>
+                precio inicial:<input type="text" id="ej7">
+            <button type="button" onclick= precio() >ejercicio 7</button>
+            </fieldset>
+            <fieldset>
+                lunes:<input type="text" id="l8">
+                
+                miercoles:<input type="text" id="mi8">
+            
+                viernes:<input type="text" id="v8">
+            
+            <button type="button" onclick= prom_ruta() >ejercicio 8</button>
+            </fieldset>
+            <fieldset>
+                inversor A:<input type="text" id="a9">
+                inversor B:<input type="text" id="b9">
+                inversor C:<input type="text" id="c9">
+            <button type="button" onclick= porcentajes() >ejercicio 9</button>
+            </fieldset>
+            <fieldset>
+                <p>matematica</p>
+                tarea 1:<input type="text" id="1m10">
+                tarea 2:<input type="text" id="2m10">
+                tarea 3:<input type="text" id="3m10">
+                examen:<input type="text" id="em10">
+                <p>física</p>
+                tarea 1:<input type="text" id="1f10">
+                tarea 2:<input type="text" id="2f10">
+                examen:<input type="text" id="ef10">
+                <p>química</p>
+                promedio de las 3 tareas:<input type="text" id="1q10">
+                examen:<input type="text" id="eq10">
+            <button type="button" onclick= califica() >ejercicio 10</button>
+            </fieldset>
+            
+        </form>
+        </div>
+        <h2>..............</h2>
+    </body>
+</html>
