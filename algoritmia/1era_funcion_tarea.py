@@ -1,10 +1,11 @@
-#1.	Dada la siguiente función: Y = x2 – 2x
-#Se requiere desarrollar un algoritmo que imprima en pantalla, para valores de x desde 1 a 10, lo siguiente:
-#a)	Cada uno de los valores de Y
-#b)	La suma de todos los valores de Y.
-#c)	Valores de Y múltiplos de 3.
-#d)	Suma de los valores de Y múltiplos de 3.
-
+"""1.	Dada la siguiente función: Y = x2 – 2x
+Se requiere desarrollar un algoritmo que imprima en pantalla, 
+para valores de x desde 1 a 10, lo siguiente:
+a)	Cada uno de los valores de Y
+b)	La suma de todos los valores de Y.
+c)	Valores de Y múltiplos de 3.
+d)	Suma de los valores de Y múltiplos de 3.
+"""
 x = list(range(1,11))
 y = []
 for j in x:
