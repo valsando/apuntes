@@ -34,6 +34,7 @@ sueldo_base = 30000 * hora
 desc = sueldo_base * 0.05
 sueldo_total = float(sueldo_base) - desc
 print(f" despues de descontar el aporte al fondo de educadores de {desc} pesos, tendria un sueldo de {sueldo_total} pesos")
+
 lis = [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20]
 habi = pd.Series(lis)
 vac = 3
